@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+    <html>
+      <style>
+        body {background-color: rgb(216, 180, 168);}
+    </style>
+     <head>
+      <script>
+        var xml; //превращаем переменную xml строкового формата в формат XML
+        function fun1() { 
+        if (window.DOMParser){ // Включаем обработчик XML структуры          
+            var parser=new DOMParser();// Firefox, Chrome, Opera и др
+            var xmlDoc=parser.parseFromString(xml, "text/xml");}//1 параметр-то что мы будем парсить, 2-MIME-тип(используется при передаче данных форм и вставки на страницу различных объектов)
+        else { 
+        var xmlDoc=new ActiveXObject("Microsoft.XMLDOM"); //стандартный объект обработки XML DOM в Internet Explorer
+        xmlDoc.async=false;
+        xmlDoc.loadXML(xml);
+        }
+
+        var persons = xmlDoc.getElementsByTagName("person"); //Получаем массив студентов
+        var output = document.getElementById("temp"); //для вывода того, что мы выбираем
+        var surname = persons[0].getElementsByTagName("surname")[0].innerHTML;
+        var name = persons[0].getElementsByTagName("name")[0].innerHTML;
+        var spec = persons[0].getElementsByTagName("spec")[0].innerHTML;
+        var ball = persons[0].getElementsByTagName("ball")[0].innerHTML;
+        var form = persons[0].getElementsByTagName("form")[0].innerHTML;
+
+        output.innerHTML = '<br/><b>Фамилия: </b> ' + surname + '<br/><b>Имя: </b>' + name +  '<br/><b>Специальность: </b>' + spec + '<br/><b>Средний балл: </b> ' + ball + '<br/><b>Форма обучения: </b> ' + form + '<br/>';
+        }
+
+        function processFiles(files) { //функция чтения файла после загрузки файла
+        var file = files[0];
+        var reader = new FileReader(); //читаем файл
+        reader.onload = function(e) {
+        xml = e.target.result; // Записываем в переменную содержимое файла,совершаем действия над строкой xml
+        }
+        reader.readAsText(file); //Указываем, что данный файл предназначен для чтения
+        }
+      </script>
+     </head>
+     <body>
+
+        <input type="file" onchange="processFiles(this.files)" onclick="fun1()">
+        <div id = "temp"></div>
+     </body>
+    </html>

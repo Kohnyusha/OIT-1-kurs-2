@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <?xml-stylesheet type="text/xsl" href="1.xsl"?>
+<stydent>
+	<person>
+      <surname>Сидорова</surname>
+	   <name>Анна</name>
+      <spec>Дизайн электронных и веб-изданий</spec>
+      <ball>6.5</ball>
+      <form>Бюджет</form>
+   </person>
+</stydent>

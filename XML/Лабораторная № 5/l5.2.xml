@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <?xml-stylesheet type="text/xsl" href="1.xsl"?>
+<stydent>
+	<person>
+      <surname>Павлов</surname>
+	  <name>Павел</name>
+      <spec>Программное обеспечение информационных технологий</spec>
+      <ball>7.0</ball>
+      <form>Бюджет</form>
+   </person>
+</stydent>
