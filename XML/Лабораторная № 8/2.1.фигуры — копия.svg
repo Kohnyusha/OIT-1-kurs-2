@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.3.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:RosyBrown;}
+	.st1{fill:Violet;}
+	.st2{fill:red;}
+	.st3{fill:LightSeaGreen;}
+</style>
+<g>
+	<polygon class="st0" points="285,281.21 216.57,317.18 229.64,240.99 174.28,187.03 250.79,175.91 285,106.59 319.21,175.91 
+		395.72,187.03 340.36,240.99 353.43,317.18 	"/>
+	<path d="M285,115.62l29.7,60.17l1.86,3.77l4.16,0.6l66.4,9.65l-48.05,46.84l-3.01,2.94l0.71,4.15l11.34,66.13l-59.39-31.22
+		l-3.72-1.96l-3.72,1.96l-59.39,31.22l11.34-66.13l0.71-4.15l-3.01-2.94l-48.05-46.84l66.4-9.65l4.16-0.6l1.86-3.77L285,115.62
+		 M285,97.55l-36.87,74.71l-82.44,11.98l59.66,58.15l-14.08,82.11L285,285.73l73.74,38.77l-14.08-82.11l59.66-58.15l-82.44-11.98
+		L285,97.55L285,97.55z"/>
+</g>
+<g>
+	<circle class="st1" cx="200" cy="600" r="110" stroke="Fuchsia" stroke-width="10"/>
+</g>
+<g>
+	<rect x="900" y="250" class="st3" width="364" height="201" stroke="Blue" stroke-width="10"/>
+</g>
+</svg>

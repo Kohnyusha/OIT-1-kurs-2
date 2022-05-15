@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+ <html>
+     <svg version="1.1" wigth="1000" height="1000">
+        <style>
+        tspan {
+            fill:red;
+            font:25px sans-serif;}
+        .frst {
+            fill:rgb(255, 20, 147);
+            font: italic 10px century gothic;
+            letter-spacing: 5px;}
+        .scnd{
+            fill:rgb(165, 255, 20);
+            font: 30px arial;}
+        .thrd{
+            fill:rgb(20, 220, 255);
+            font: 27px coolsville;
+            letter-spacing: 1px;}
+        .fr{
+            fill:rgb(255, 126, 20);
+            font: 17px helvetica;}
+
+        </style>
+        <path id="tx1" fill="none" stroke="red" d="M6,150C49.63,93,105.79,36.65,156.2,47.55,207.89,58.74,213,131.91,264,150c40.67,14.43,108.57-6.91,229-145"/>
+         <text>
+            <textPath href="#tx1">TextTextTextTextTextTextTextTextTextTextTextText</textPath>
+         </text> 
+         
+
+        <text x="100" y="220" class="frst">TextTextTextTextTextText</text>
+        <text x="5" y="240" class="frst">TextTextTextTextTextText</text>
+
+        <text x="20" y="320" class="fr">TextTextText<tspan dx="30" dy="20">TextTextText</tspan></text>
+       
+        <text text-anchor="middle" x="100" y="390" class="thrd">AAAAAA</text>
+        <text text-anchor="start" x="100" y="410" class="thrd">BBBBBB</text>
+        <text text-anchor="end" x="100" y="430" class="thrd">CCCCCC</text>
+
+        <text  x="100" y="500" transform="rotate(10, 120, 55)" class="scnd">TextTextText</text>
+
+        <text y="570" textLength="150" class="frst">TextTextText</text>
+        <text y="600" textLength="300" class="frst">TextTextText</text>
+
+        <text y="640" textLength="300" lengthAdjust="spacing" class="fr">TextTextText</text>
+        <text y="700" textLength="300" lengthAdjust="spacingAndGlyphs" class="fr">TextTextText</text>
+       
+
+     </svg>
+ </html>
