@@ -1,0 +1,24 @@
+INVENTORY {background-color: rgb(224, 166, 221);}
+UNIVERSITY {
+    display: block;
+    text-align: center;
+    margin: 10px 20px 10px 20px;
+    margin-top: 50pt;
+    border-style: solid;
+    background-color: rgba(223, 228, 155, 0.685);
+    border-color: white;
+    font-size: 15pt;
+}
+BALL {
+    display: block;
+    text-align: center;
+    border-top: solid;
+    background-color: rgb(200, 124, 223);
+    border-color: white;
+}
+KOL, TOWN {
+    display: block;
+    text-align: center;
+    border-top: solid;
+    border-color: white;
+}

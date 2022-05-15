@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+        <style type = "text/css">
+            body {background:rgb(214, 185, 212);}  
+        </style>
+        <script>
+        function f(x) {
+        var $fun = $(":radio");
+        var $funct;
+        for (i = 0; i < 4; i++) {
+        if ($fun[i].checked) {$funct = $fun[i].value;}
+        }
+
+        if($funct==1){return -x * x;}
+        if($funct==2){return -x * x * x;}
+        if($funct==3){return 10 * Math.cos(x);}
+        if($funct==4){return 10 * Math.sin(x);}
+        }
+
+        function graph() {
+        var graph = $("#graph")[0];
+        var canvas = $("#graph")[0].getContext("2d");//возвращает контекст рисования на холсте, или null, если идентификатор контекста не определен.
+
+        canvas.beginPath();//начать процесс отрисовки
+
+        var y0 = graph.height / 2;
+        var x0 = graph.width / 2;
+
+        canvas.strokeStyle = $("#color").val(); ; //выбирает выбранное значение цвета
+        for (var x = -graph.width; x < graph.width; x += 0.1) {
+        var y = f(x);
+        canvas.lineTo(6 * x + x0, y + y0);
+        }
+        canvas.stroke();//отрисовка линии
+        }
+        </script>
+    </head>
+        <body>
+            <form style="position: absolute; top: 0px; left: 10px"> 
+                <p>График:</p> 
+                <input type="radio" name="k" value="1"> y=x^2 
+                <input type="radio" name="k" value="2"> y=x^3 
+                <input type="radio" name="k" value="3"> y=sin(x) 
+                <input type="radio" name="k" value="4"> y=cos(x) <br> <br> 
+
+                Цвет: 
+                <select name="clr" id = "color"> 
+                <option>Red</option> 
+                <option>Yellow</option> 
+                <option>Aqua</option> 
+                <option>Coral</option>
+                </select> 
+                <br> <br> 
+                <input type="button" value="Рисовать" onClick="graph()"> 
+                </form> 
+                <canvas id="graph" width="400px" height="400px" style="position: absolute; top: 155px; left: 10px; border:3px solid black"></canvas> 
+</html>
+
+

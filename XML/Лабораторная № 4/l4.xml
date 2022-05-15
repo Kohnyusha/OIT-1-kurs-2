@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <?xml-stylesheet type="text/xsl" href="1.xsl"?>
+    <GROUP>
+	    <HUMAN>
+            <SURNAME>Петров</SURNAME>
+	        <NAME>Петр</NAME>
+            <LASTNAME>Петрович</LASTNAME>
+            <BALL>6.3</BALL>
+            <YEAR>2002</YEAR>
+        </HUMAN>
+
+        <HUMAN>
+            <SURNAME>Иванов</SURNAME>
+	        <NAME>Иван</NAME>
+            <LASTNAME>Иванович</LASTNAME>
+            <BALL>7.6</BALL>
+            <YEAR>2001</YEAR>
+        </HUMAN>
+
+        <HUMAN>
+            <SURNAME>Павлов</SURNAME>
+	        <NAME>Павел</NAME>
+            <LASTNAME>Павлович</LASTNAME>
+            <BALL>5.5</BALL>
+            <YEAR>2003</YEAR>
+        </HUMAN>
+   
+        <HUMAN>
+            <SURNAME>Сидорова</SURNAME>
+	        <NAME>Анна</NAME>
+            <LASTNAME>Николаевна</LASTNAME>
+            <BALL>6.0</BALL>
+            <YEAR>2004</YEAR>
+        </HUMAN>
+
+        <HUMAN>
+            <SURNAME>Веломская</SURNAME>
+	        <NAME>Ольга</NAME>
+            <LASTNAME>Андреевна</LASTNAME>
+            <BALL>4.8</BALL>
+            <YEAR>2001</YEAR>
+        </HUMAN>
+    </GROUP>

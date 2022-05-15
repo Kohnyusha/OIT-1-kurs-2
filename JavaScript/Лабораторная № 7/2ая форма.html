@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Форма 2</title>
+        <style type = "text/css">
+            body {
+            background:rgb(229, 188, 191);
+            font-family:"academy engraved let";
+            color:rgb(17, 7, 26);
+            font-size:15pt;
+            letter-spacing:1pt;
+            } 
+            .top {
+            color:rgb(199, 185, 211);
+            font-size:25pt;
+            text-align:center;
+            text-decoration:underline;
+            background-color: rgb(126, 85, 110);
+            height:60px;
+            }
+            .p {
+            border: 3px solid black;
+            animation: change-color 5s infinite;
+            }
+            @keyframes change-color {
+            0% {background-color: rgb(179, 74, 138);} 
+            50% {background-color: #d4b5b5;}  
+            100% {background-color: rgb(179, 74, 138);}
+            }
+            #amng {
+            animation:anim 4s infinite;
+            }
+        </style>
+        <script type = "text/javascript">
+        function fun(){
+            alert("Благодарим за ответ!");
+        }
+        </script>
+    </head>
+    <body>
+        <form>
+            <p class = "top"><a href="https://www.youtube.com/watch?v=1YfnwVXxm8o&list=PLVtYY3Ujl33P8I2sepaUWtF_J1THvy176">Мультфильм "Gravity Falls"</a></p>
+            <img src="пикча.jpg"  width="530" height="315">  <img src="пикча3.jpg"  width="530" height="315">  <img src="пикча2.jpeg"  width="530" height="315">
+	        <p class = "p"><b>Gravity Falls</b>- американский анимационный телевизионный сериал, созданный Алексом Хиршем и компанией Disney Television Animation для телеканалов Disney Channel и Disney XD. Мультсериал повествует о приключениях близнецов — мальчика Диппера и девочки Мэйбл, которые проводят летние каникулы у двоюродного дедушки Стэна в вымышленном американском городке под названием Гравити Фолз.</p>
+         
+        <fieldset>
+            <legend><b>Дорогой гость, ответьте на пару вопросов</b></legend>
+            <p>1. Нравится ли Вам мультфильм?</p>
+            <input type="radio" name="radiobutton" value="y"> Да <br>
+            <input type="radio" name="radiobutton" value="f"> Неплохой <br>
+            <input type="radio" name="radiobutton" value="n"> Нет
+
+            <p>2. Ваш любимый персонаж?</p>
+            <input type="checkbox" name="checkbutton" value="Стен">Стен Пайнс
+            <input type="checkbox" name="checkbutton" value="Диппер">Диппер
+            <input type="checkbox" name="checkbutton" value="Мэйбл">Мэйбл
+            <input type="checkbox" name="checkbutton" value="Пухля">Пухля
+            <input type="checkbox" name="checkbutton" value="Зус">Зус
+
+            <p>3. Считаете ли Вы, что мультфильм достоин показа на телевидении?</p>
+            <input type="radio" name="radiobutton" value="y"> Да <br>
+            <input type="radio" name="radiobutton" value="f"> Вполне <br>
+            <input type="radio" name="radiobutton" value="n"> Нет <br>
+
+            <input type="reset" value="Очистить"> 
+            <input type="submit" value="Отправить" onclick="fun()">
+        </fieldset>
+        </form>
+    </body>
+</html>

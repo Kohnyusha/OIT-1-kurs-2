@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+       function fun(){
+        document.write("Поле 1: " + document.forms[0].elements[0].value + " Поле 2: " + document.getElementById("p2").value)
+       } 
+    </script>
+</head>
+<body>
+<form name = forma>
+    Текстовое поле 1: <input type="text"/><br>
+    Текстовое поле 2: <input id = 'p2' type="text"/><br>
+
+    <br><br>
+    <input type="button" value="Печать" onclick="fun()">
+</form>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+ <html>
+  <head>
+   <title>Задание 3</title>
+    <script type='text/javascript'>
+    var x=4, y=10;
+    var z1, z2, z3;
+    z1=(35*y-25*x)/5+232;
+    z2=8*y/x+5*x/y-4;
+    z3=z1 / z2;
+    document.write('Значение 1-го уравнения =  '+z1+'<br/>');
+    document.write('Значение 2-го уравнения = '+z2+'<br/>');
+    document.write('Остаток от деления значения 1-ого уравнения на значение 2-ого уравнения = '+z3+'<br/>');
+    function fun1(){
+    alert('Результат '+z1);
+    }
+    function fun2(){
+    alert('Результат '+z2);
+    }
+    function fun3(){
+    alert('Результат '+z3);
+    }
+    </script>
+  </head>
+  <body>
+    <input type='button' value='Значение 1-го уравнения' onclick='fun1()'/>
+    <input type='button' value='Значение 2-го уравнения' onclick='fun2()'/>
+    <input type='button' value='Остаток от деления' onclick='fun3()'/>
+   </body>
+</html>

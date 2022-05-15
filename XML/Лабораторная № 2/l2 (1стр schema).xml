@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><!--декларация (пролог + кодировка)-->
+<?xml-stylesheet type="text/css" href="1.css"?><!--подключение файла таблицы стилей и самого css файла-->
+<INVENTORY xmlns:xsi="http://www.w3.org/2001/XMLSchema"  xsi:schemaLocation = "sch1.xsd">
+<UNIVERSITY>
+      <NAME>БГТУ</NAME>
+	   <BALL>305 баллов</BALL>
+      <KOL>40 человек</KOL>
+      <TOWN>г.Минск</TOWN>
+  </UNIVERSITY>
+  <UNIVERSITY>
+      <NAME>БГУ</NAME>
+      <BALL>333 баллов</BALL>
+      <KOL>35 человек</KOL>
+      <TOWN>г.Минск</TOWN>
+   </UNIVERSITY>
+   <UNIVERSITY>
+      <NAME>БНТУ</NAME>
+      <BALL>300 баллов</BALL>
+      <KOL>45 человек</KOL>
+      <TOWN>г.Минск</TOWN>
+   </UNIVERSITY>
+   <UNIVERSITY>
+      <NAME>БрГТУ</NAME>
+      <BALL>297 баллов</BALL>
+      <KOL>20 человек</KOL>
+      <TOWN>г.Брест</TOWN>
+   </UNIVERSITY>
+   </INVENTORY>
+
+

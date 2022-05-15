@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type = "text/css">
+            body {background:rgb(214, 185, 212);}
+        </style>
+        <script>
+        function f(x) {    
+           if (document.forms[0].k[0].checked) { 
+           return -x * x; //возвращает значение соответсвтующее выбранному уравнению
+           } 
+           else if (document.forms[0].k[1].checked) { 
+           return -x * x * x; 
+           } 
+           else if (document.forms[0].k[2].checked) { 
+           return 10 * Math.cos(x); 
+           } 
+           else if (document.forms[0].k[3].checked) { 
+           return 10 * Math.sin(x); 
+           } 
+        }
+        
+        function graph() {   
+           var graph = document.getElementById("graph"); //получаем элемент
+           var canvas = graph.getContext("2d");//настраиваем на то, что бы рисовать 2D объекты.
+           canvas.clearRect(0,0,400,400);//очищение обл где будет график, 
+           
+           canvas.beginPath(); //начать процесс отрисовки
+           
+           var y0 = graph.height / 2; //график с середины обл
+           var x0 = graph.width / 2; 
+           
+           canvas.strokeStyle = document.forms[0].color.value; //Свойство устанавливает цвет для рисования графика
+           for (var x = -graph.width; x < graph.width; x += 0.1) { //выбирает точки с шагом 0.1
+           var y = f(x); 
+           canvas.lineTo(6 * x + x0, y + y0);  //создаёт шаблон линии но не отрисовывает её
+           } 
+           canvas.stroke(); //отрисовывает линию по шаблону выше
+           }
+           //canvas - элемент , предназначенный для создания анимации рисунков
+                </script>
+            </head>
+            <body>
+                <form style="position: absolute; top: 0px; left: 10px"> 
+                    <p>График:</p> 
+                    <input type="radio" name="k" value="1"> y=x^2 
+                    <input type="radio" name="k" value="2"> y=x^3 
+                    <input type="radio" name="k" value="3"> y=sin(x) 
+                    <input type="radio" name="k" value="4"> y=cos(x) <br> <br> 
+                    Цвет: 
+                    <select name="color" > 
+                    <option>Red</option> 
+                    <option>Yellow</option> 
+                    <option>Aqua</option> 
+                    <option>Coral</option>
+                    </select> 
+                    <br> <br> 
+                    <input type="button" value="Рисовать" onClick="graph()"> 
+                    </form> 
+                    <!--canvas - элемент , предназначенный для создания анимации рисунков-->
+                    <canvas id="graph" width="400px" height="400px" 
+                    style="position: absolute; top: 155px; left: 10px; border:3px solid black"></canvas> 
+</html>

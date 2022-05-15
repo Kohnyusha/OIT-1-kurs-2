@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Задание 1</title>
+  <style>
+      input{ 
+        background-color: rgb(170, 148, 200) ;
+        color:  rgb(238, 214, 214);
+        font-family: academy engraved let;
+        font-size: 100%;
+        margin: 2px;
+        padding: 5px;
+        }
+  </style>
+   <script type='text/javascript'>
+
+   //задание 1//
+     function fun11() {
+        alert('Вас приветствует учебный центр!');}
+     function fun12() {
+        x=prompt('Введите Ваше имя','Имя');
+        alert("Добро пожаловать на наши курсы, " +x);}
+     function fun13() {
+        y=confirm('Хотите стать Web-дизайнером?');
+        if(y==1){
+            alert('Учите стили CSS и JavaScript!')}
+        else {
+        alert('Упускаете время!')}
+     }
+
+    //задание 2//
+     function fun2(){
+        var n1=10;
+        var n2=5;
+        var n3=22;
+        var s1='10';
+        var s2='5';
+        var s3='22';
+         document.write('Сумма чисел = '+(n1+n2)+'<br/>');
+         document.write('Сумма двух строк = '+s1+s2+'<br/>'); 
+         document.write('Сумма числа и строки = ' +n3+s2+'<br/>');
+         document.write('Сумма строки и числа = ' +s3+n2+'<br/>' );
+        alert(' Результатом сложения строки и числа всегда будет = '+s3+n2);
+     }
+
+    //задание 3//
+     function fun3() {
+        var x=4, y=10;
+        var z1, z2, z3;
+         z1=(35*y-25*x)/5+232;
+         z2=8*y/x+5*x/y-4;
+         z3=z1 / z2;
+         
+         document.write('Значение 1-го уравнения =  '+z1+'<br/>');
+         document.write('Значение 2-го уравнения = '+z2+'<br/>');
+         document.write('Остаток от деления значения 1-ого уравнения на значение 2-ого уравнения = '+z3+'<br/>');
+     }
+
+    //задание 4//
+         function fun4(){
+          x=prompt('Введите число');
+          if (((x<30) || (x>=60)) && (x!=9) && (x%2==0)) 
+            {document.write('Правильное значение');}
+          else 
+            {document.write('Не правильное значение');}
+     }
+
+    //задание 5//
+         function fun5(){
+          a=prompt('Введите 1-ое число');
+          b=prompt('Введите 2-ое число');
+         if (a>b)
+            {document.write('1-ое число больше 2-ого'); }
+         else if(a==b)
+            { document.write('Числа равны')}
+         else  
+            {document.write('1-ое число меньше 2-ого');} 
+     }
+
+    //задание 6//
+         function fun6(){
+          let day = parseInt(prompt('Введите номер дня недели','Номер'));
+         switch (day){
+         case 1 :
+            alert("Понедельник");
+         break;
+         case 2:
+            alert("Вторник");
+         break;
+         case 3:
+            alert("Среда");
+         break;
+         case 4:
+            alert("Четверг");
+         break;
+         case 5:
+            alert("Пятница");
+         break;
+         case 6:
+            alert("Суббота");
+         break;
+         case 7:
+            alert("Воскресенье");
+         break;
+         default:
+            alert("Номер введен не правильно");}
+     }
+
+    //задание 7//
+         function fun7(){
+          var txt="";
+         try{
+            adddlert("Добро пожаловать гость!");}
+         catch(err){
+            alert("На этой странице произошла ошибка. Нажмите OK, чтобы продолжить.");}
+     }
+   </script>
+ </head>
+<body>
+    <input type='button' value='Окно оповещения' onclick='fun11()' />
+    <input type='button' value='Окно подтверждения' onclick='fun12()' />
+    <input type='button' value='Окно запроса' onclick='fun13()' />
+    <input type='button' value='Задание 2' onclick='fun2()' />
+    <input type='button' value='Задание 3' onclick='fun3()' />
+    <input type='button' value='Задание 4' onclick='fun4()' />
+    <input type='button' value='Задание 5' onclick='fun5()' />
+    <input type='button' value='Задание 6' onclick='fun6()' />
+    <input type='button' value='Задание 7' onclick='fun7()' />
+</body>
+</html>

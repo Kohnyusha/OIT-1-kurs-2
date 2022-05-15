@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div onclick = "fun()" id = "dr"style = "position: relative; cursor: pointer;">
+        <p>Ljs;odvno;jbv aodvn oj voaeivn</p>
+        <img src = "image2.jpg" width="300px" height="300px">
+        </div>
+        <script>
+            function fun(){
+            let startTime = Date.now();
+            let timer = setInterval(function(){
+
+                let timePassed = Date.now() - startTime;
+
+                if (timePassed >= 1000){
+                    clearInterval(timer);
+                    return;
+                }
+                 draw(timePassed);}, 20);
+
+                function draw(timePassed){
+                    dr.style.left = timePassed + 'px';
+                }}
+        </script>
+    </body>
+</html>

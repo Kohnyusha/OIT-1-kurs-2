@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Задание 2</title>
+        <script type = 'text/javascript'>
+        function Student(name, lastname, physics, math, informatic) {
+            this.name = name;
+            this.lastname = lastname;
+            this.physics = physics;
+            this.math = math;
+            this.informatic = informatic;
+            this.score = function score(){
+                document.write('Средний балл: ', (this.physics+this.math+this.informatic)/3 ,  '<br\>');
+            }
+        }
+        s1 = new Student('Ольга','Ленская', 9, 8, 10);
+        s2 = new Student('Татьяна','Смирнова', 5, 6, 8);
+        s3 = new Student('Алена','Зайцева', 7, 6, 8);
+
+        document.write(s1.name, ' ', s1.lastname,'<br>', 'Оценки: Физика ', s1.physics, ', Математика ', s1.math,', Информатика ',s1.informatic,'<br\>');
+        s1.score();
+        document.write(s2.name, ' ', s2.lastname,'<br>', 'Оценки: Физика ', s2.physics, ', Математика ', s2.math,', Информатика ',s2.informatic,'<br\>');
+        s2.score();
+        document.write(s3.name, ' ', s3.lastname,'<br>', 'Оценки: Физика ', s3.physics, ', Математика ', s3.math,', Информатика ',s3.informatic,'<br\>');
+        s3.score(); 
+
+        Student.prototype.kurs = this.kurs;
+        s1.kurs=1;
+        s2.kurs=3;
+        s3.kurs=2;
+        
+        document.write(s1.name + ' ' + s1.lastname + ', курс: ' + s1.kurs + '<br\>');
+        document.write(s2.name + ' ' + s2.lastname + ', курс: ' + s2.kurs + '<br\>');
+        document.write(s3.name + ' ' + s3.lastname + ', курс: ' + s3.kurs + '<br\>');
+        </script>
+    </head>
+</html>

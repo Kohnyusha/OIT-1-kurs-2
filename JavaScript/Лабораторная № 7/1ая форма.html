@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Форма 1</title>
+        <style type = "text/css">
+         body {
+         background: rgb(236, 177, 236);}
+        </style>
+        <script type = "text/javascript">
+        function print() {
+         let items='';
+         let t=0;
+         for (i = 0; i < 5; i++) {
+         if (document.forms[0].checkbutton[i].checked) {
+            t=t+1;
+            items += "<li>" + document.forms[0].checkbutton[i].value + "</li>";}
+         }
+        document.write(document.forms[0].elements[0].value + "<br> Студент " + document.forms[0].elements[1].value + " специальность " + document.forms[0].elements[3].value +
+        " курс " + document.forms[0].radiobutton.value + " должен сдавать следующие  предметы: <ul>" +items) 
+        }
+        </script>
+        </head>
+        <body>
+            <form>
+                 <textarea name="textarea" rows="10" cols="20">Факультет Информационных Технологий</textarea><br><br>
+                
+                 <input type="text" name="LastName" placeholder="Фамилия"/><br>
+                 <input type="text" name="FirstName" placeholder="Имя"/><br><br>
+
+                 <b>Специальность
+                 <select>
+                 <option>ИСИТ</option>
+                 <option>ПОИТ</option>
+                 <option>ПОИБМС</option>
+                 <option>ДЭВИ</option>
+                 </select>
+                    
+                 <p>Курс</p>
+                 <input type="radio" name="radiobutton" value="1"> 1
+                 <input type="radio" name="radiobutton" value="2"> 2
+                 <input type="radio" name="radiobutton" value="3"> 3
+                 <input type="radio" name="radiobutton" value="4"> 4
+                
+                 <p>Предметы</p>
+                 <input type="checkbox" name="checkbutton" value="ОИТ"> ОИТ
+                 <input type="checkbox" name="checkbutton" value="ОАП"> ОАП 
+                 <input type="checkbox" name="checkbutton" value="КЯР"> История
+                 <input type="checkbox" name="checkbutton" value="Физика"> Физика
+                 <input type="checkbox" name="checkbutton" value="Математика"> Математика 
+                 <br><br>
+
+                 <input type="reset" value="Очистить"> 
+                 <input type="submit" value="Принять"><br><br>
+                 <input type="button" value="Печать" onclick="print()">
+            </form>
+        </body>
+</html>
+        

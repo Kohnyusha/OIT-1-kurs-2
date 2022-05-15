@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div id = "t">
+            <img src = "image2.jpg" height = "200px" width = "220px">
+            <p>Тексттекстеткстепршгвмищоывст</p>
+            </body>
+        <script>  
+                 var t = document.getElementById("t");
+                 t.onmousedown = function(e) {
+    
+                 var coords = getCoords(t);
+                 var shiftX = e.pageX - coords.left;
+                 var shiftY = e.pageY - coords.top;
+    
+                 t.style.position = "absolute";
+                 moveAt(e);
+    
+                 function moveAt(e) {
+                 t.style.left = (e.pageX - shiftX) + "px";
+                 t.style.top = (e.pageY - shiftY) + "px";
+                }
+    
+                 document.onmousemove = function(e) {
+                 moveAt(e);
+                };
+    
+                 t.onmouseup = function() {
+                 document.onmousemove = null;
+                 t.onmouseup = null;
+                };
+    
+                 t.ondragstart = function() {
+                 return false;
+                };
+    
+                 function getCoords(elem) { 
+                 var box = elem.getBoundingClientRect();
+                 return {
+                 top: box.top + pageYOffset,
+                 left: box.left + pageXOffset};
+            }       
+        }
+            </script>
+    </body>
+</html>

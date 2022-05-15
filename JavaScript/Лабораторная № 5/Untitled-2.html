@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <script>
+        function fun() {
+        document.write(document.getElementsByTagName("h1")[0].innerText + "  " + document.getElementById("zag").innerText + "  " + document.getElementsByClassName("class")[0].innerText)
+        }
+            </script>
+        </head>
+    <body>
+        <h1>Заголовок 1</h1>
+        <h2 id="zag">Заголовок 2</h2>
+        <h3 class = "class">Заголовок 3</h3>
+        <input type="button" value="Вывод" onclick="fun()">
+        </body>
+    </html>

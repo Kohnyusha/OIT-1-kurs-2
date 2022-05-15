@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+ <html>
+     <head>
+        <title>Изучение HTML5</title>
+        <style>
+            body {
+                background-color: rgb(226, 177, 161);
+                font-family: academy engraved let;
+                color: white;
+                font-size: 20px;
+            }
+        </style>
+        <script>
+            function getCoordinates() {
+            navigator.geolocation.getCurrentPosition(showCoordinates);
+            }
+            function showCoordinates(position) {
+            alert("Широта:" + position.coords.latitude + " Долгота:" + position.coords.longitude);
+            }
+        </script>
+     </head>
+    <body>
+        <h1 align="center">Я, <mark>Кохнюк Александра Сергеевна,</mark> изучаю HTML5</h1>
+        <br>
+        <p>Gesaffelstein, The Weeknd - Lost in the Fire</p>
+        <audio src="The Weeknd.mp3" controls></audio>
+        <br>
+        <br>
+        <p>Трейлер игры "The Sims 4:Паранормальное"</p>
+	    <video src="sims.mp4" width="300" height="200" controls></video>
+        <br>
+        <p>Для считывания координат нажмите на кнопку</p>
+        <input type="button" value="Узнать свои координаты" onclick ="getCoordinates()"/>
+    </body>
+ </html>

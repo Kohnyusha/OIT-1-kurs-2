@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+ <html>
+    <title>Гистограмма</title>
+     <body>
+        <canvas id="canv" width="650" height="500" style="border:3px solid rgb(0, 0, 0); background-color: whitesmoke;"></canvas>
+         <script>
+             var c = document.getElementById("canv");
+             var ctx = c.getContext("2d");//настраиваем на то, что бы рисовать 2D объекты.
+             ctx.font = "25px Arial serif";
+             ctx.fillText("Лабораторные по темам",280,50); 
+
+             //ось Оу
+             ctx.moveTo(50,80); 
+             ctx.lineTo(40,115);
+
+             ctx.moveTo(50,80);
+             ctx.lineTo(60,115);
+
+             ctx.moveTo(50,80);
+             ctx.lineTo(50,480);
+
+             ctx.moveTo(40,435);
+             ctx.lineTo(60,435);
+
+             ctx.moveTo(40,375);
+             ctx.lineTo(60,375);
+
+             ctx.moveTo(40,315);
+             ctx.lineTo(60,315);
+
+             ctx.moveTo(40,255);
+             ctx.lineTo(60,255);
+
+             ctx.moveTo(40,195);
+             ctx.lineTo(60,195);
+
+             ctx.moveTo(40,135);
+             ctx.lineTo(60,135);
+
+             ctx.fillStyle = "black";
+             ctx.font = "15px Arial serif";
+             ctx.fillText("1",20,440);
+             ctx.fillStyle = "black";
+             ctx.font = "15px Arial serif";
+             ctx.fillText("3",20,380);
+             ctx.fillStyle = "black";
+             ctx.font = "15px Arial serif";
+             ctx.fillText("5",20,320);
+             ctx.fillStyle = "black";
+             ctx.font = "15px Arial serif";
+             ctx.fillText("7",20,260);
+             ctx.fillStyle = "black";
+             ctx.font = "15px Arial serif";
+             ctx.fillText("9",20,200);
+             ctx.fillStyle = "black";
+             ctx.font = "15px Arial serif";
+             ctx.fillText("11",20,140);
+             ctx.fillStyle = "black";
+             ctx.font = "20px Arial serif";
+             ctx.fillText("Кол-во лабораторных ",15,75);
+
+             //ось Ох
+             ctx.moveTo(520,460);
+             ctx.lineTo(485,450);
+
+             ctx.moveTo(520,460);
+             ctx.lineTo(485,470);
+
+             ctx.moveTo(30,460);
+             ctx.lineTo(520,460);
+
+             ctx.fillStyle = "black";
+             ctx.font = "15px Arial serif";
+             ctx.fillText("JavaScript",80,480);
+             ctx.fillStyle = "black";
+             ctx.font = "15px Arial serif";
+             ctx.fillText("XML",235,480);
+             ctx.fillStyle = "black";
+             ctx.font = "15px Arial serif";
+             ctx.fillText("HTML5",370,480);
+             ctx.fillStyle = "black";
+             ctx.font = "20px Arial serif";
+             ctx.fillText("Предмет",510,480);
+
+             ctx.stroke();
+
+             //обычная заливка
+             ctx.fillStyle="rgb(255, 0, 200)";
+             ctx.fillRect(80, 130, 65, 330);
+
+             //градиент
+             var gradient = ctx.createLinearGradient(200, 300, 200, 500);
+             gradient.addColorStop(0, "rgb(5, 241, 143)");
+             gradient.addColorStop(1, "rgb(186, 241, 5");
+             ctx.fillStyle = gradient;
+             ctx.fillRect(230, 170, 40, 290);
+
+             //заливка изображением
+             var img = new Image();
+             img.src = "4.jpg";
+             img.onload = function() {//загрузка ресурсов
+             var pattern = ctx.createPattern(img, "repeat");//размножаем эл для использования в качестве заливки
+             ctx.fillStyle = pattern;
+             ctx.fillRect(350, 380, 80, 80);};
+             ctx.fill();
+         </script>
+     </body>
+ </html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type = "text/css">
+        body {background:rgb(223, 197, 199);}
+        </style>
+        <script type="text/javascript"></script>
+    </head>
+    <body>
+        <img id = "k" src = "image2.jpg" height = "200px" width = "220px">
+        <div id = "t">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </body>
+        <script>
+            //для картинки
+            var k = document.getElementById("k");
+            k.onmousedown = function(e) { //функция принимает параметр e - объект курсора
+                 var coords = getCoords(k); //получаем координаты элемента
+                 var shiftX = e.pageX - coords.left; //свойство e.pageX содержит в себе расстояние от левой границы документа до курсора
+                 var shiftY = e.pageY - coords.top;
+    
+                 k.style.position = "absolute"; //Устанавливает способ позиционирования элемента относительно окна браузера или других объектов на веб-странице.
+                 moveAt(e); //функция меняет координаты изображения тем самым перемещая его по странице
+                 k.style.zIndex = 1000; //показывать картинку над другими элементами
+    
+                 function moveAt(e){ //функция изменения координат
+                 k.style.left = (e.pageX - shiftX) + "px";
+                 k.style.top = (e.pageY - shiftY) + "px";
+                 }
+    
+                 document.onmousemove = function(e){ //теперь можно перемещать по экрану при нажатии мыши
+                 moveAt(e);
+                 };
+    
+                 k.onmouseup = function() { //если енопка мыши опущена, то объект не перемещается
+                   document.onmousemove = null;
+                   k.onmouseup = null;
+                 };
+            } 
+                 k.ondragstart = function() { //чтобы картинка не раздваивалась при меремещении,т к браузер имеет свой собственный Drag’n’Drop, который автоматически запускается и вступает в конфликт с нашим.
+                 return false; //Drag’n’Drop - функция. Это когда вы 'захватываете' мышкой объект и перетягиваете его в другое место.
+                };
+    
+                 function getCoords(elem) { 
+                 var box = elem.getBoundingClientRect();//возвращает прямоугольник - контейнер, в котором заключен объект
+                 return {
+                 top: box.top + pageYOffset, //pageУOffset - прокрутка окна по оси У
+                 left: box.left + pageXOffset }; 
+                }
+    
+                // для тектовой области
+                 var t = document.getElementById("t");
+                 t.onmousedown = function(e) {
+    
+                 var coords = getCoords(t);
+                 var shiftX = e.pageX - coords.left;
+                 var shiftY = e.pageY - coords.top;
+    
+                 t.style.position = "absolute";
+                 moveAt(e);
+    
+                 function moveAt(e) {
+                 t.style.left = (e.pageX - shiftX) + "px";
+                 t.style.top = (e.pageY - shiftY) + "px";
+                }
+    
+                 document.onmousemove = function(e) {
+                 moveAt(e);
+                };
+    
+                 t.onmouseup = function() {
+                 document.onmousemove = null;
+                 t.onmouseup = null;
+                };
+    
+                 t.ondragstart = function() {
+                 return false;
+                };
+    
+                 function getCoords(elem) { 
+                 var box = elem.getBoundingClientRect();
+                 return {
+                 top: box.top + pageYOffset,
+                 left: box.left + pageXOffset};
+            }       
+        }
+            </script>
+    </body>
+</html>

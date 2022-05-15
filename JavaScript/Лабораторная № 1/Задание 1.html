@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Задание 1</title>
+   <script type='text/javascript'>
+   //1
+    function fun1() {
+    alert('Вас приветствует учебный центр!');
+    }
+    function fun2() {
+    x=prompt('Введите Ваше имя','Имя');
+    alert("Добро пожаловать на наши курсы, " +x);
+    }
+    function fun3() {
+    y=confirm('Хотите стать Web-дизайнером?');
+    if(y==1){
+        alert('Учите стили CSS и JavaScript!')}
+        else {
+    alert('Упускаете время!')}
+    }
+    function fun4(){
+      var n = 10; // Сколько элементов хотим получить
+var fibonacci = [0, 1]; // Первые два элемента последовательности Фибоначчи
+for (i = 2; i < n; i ++) {
+  // Получаем i-й элемент последовательности как сумму предыдущих двух
+  fibonacci[i] = fibonacci[i-1] + fibonacci[i-2];
+}
+console.log(fibonacci.slice(0,n));
+document.write("sdgb", +fibonacci);
+    }
+  </script>
+ </head>
+<body>
+<input type='button' value='Окно оповещения' onclick='fun1()' />
+<input type='button' value='Окно запроса' onclick='fun2()' />
+<input type='button' value='Окно подтверждения' onclick='fun3()' />
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Задание 1</title>
+        <script type = 'text/javascript'>
+        function Gruppa(n,spec,kolich) {
+
+        this.n=n;
+        this.spec=spec;
+        this.kolich=kolich;
+
+        this.add_stud = function add_stud(k) {
+        this.kolich+=k;
+        document.write('В группу ' + this.n + ' добавили '+ k + ' студентов. '); 
+        }
+        this.sub_stud= function sub_stud(k ){
+        this.kolich-=k;
+        document.write(' Отчислили '+ k +' студентов <br\>');
+        }
+    }
+        gr1 = new Gruppa(1, 'ИСИТ', 32, 1);
+        gr2 = new Gruppa(2, 'ПОИТ', 30, 1);
+        gr3 = new Gruppa(3, 'ПОИМБС', 29, 1);
+        gr4 = new Gruppa(4, 'ДЭВИ', 24, 1);
+
+        gr1.add_stud(2);
+        gr1.sub_stud(0);
+        gr2.add_stud(1);
+        gr2.sub_stud(3);
+        gr3.add_stud(5);
+        gr3.sub_stud(6);
+        gr4.add_stud(2);
+        gr4.sub_stud(2);
+
+        document.write('Группа ',gr1.n, ', специальность ', gr1.spec, ', количество студентов ', gr1.kolich, '<br\>');
+        document.write('Группа ',gr2.n, ', специальность  ', gr2.spec, ', количество студентов ', gr2.kolich, '<br\>');
+        document.write('Группа ',gr3.n, ', специальность  ', gr3.spec, ', количество студентов ', gr3.kolich, '<br\>');
+        document.write('Группа ',gr4.n, ', специальность  ', gr4.spec, ', количество студентов ', gr4.kolich, '<br\>');
+        
+        
+        </script>
+    </head>
+</html>

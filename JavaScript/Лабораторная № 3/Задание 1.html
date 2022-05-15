@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Задание 1</title>
+    <script type='text/javascript'>
+    arr=new Array();
+    var pi=Math.PI;
+    var exp=Math.E;
+    var i, max=0, min=1000;
+
+    arr[0]=6*Math.pow(pi,2)+3*Math.pow(exp,8);
+    arr[1]=2*Math.cos(4)+Math.cos(12)+8*Math.pow(exp,3);
+    arr[2]=3*Math.sin(9)+Math.log(5)+Math.sqrt(3);
+    arr[3]=2*Math.tan(5)+6*pi+8*Math.sqrt(12);
+
+    for(i=0; i<4; i++)
+    {
+        document.write('Элемент массива '+i+' = '+arr[i]+ '<br>');
+    }
+        for(i=0;i<4;i++){
+        if(arr[i]>max){
+            max=arr[i];
+        }
+    }
+        for(i=0;i<4;i++){
+        if(arr[i]<min){
+            min=arr[i];
+        }
+    }
+        document.write('MAX элемент массива =  '+max+ ' <br> '); 
+        document.write('MIN элемент массива =  '+min+' <br> ');      
+    </script>
+    </head>
+</html>

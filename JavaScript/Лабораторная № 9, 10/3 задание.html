@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type = "text/css">
+            body {background:rgb(201, 185, 214);}
+            </style>
+    </head>
+    <body>
+        <img src=btf.png height="250px" width="250px" id="myimg" onclick="fun()" style = "position: relative; cursor: pointer; top:50px; left:0px">
+        <script type="text/javascript">
+        
+            function fun(){
+            let start = Date.now(); // запомнить время запуска анимации
+            let timer = setInterval(function() {
+        // сколько времени прошло с начала анимации?
+            let timePassed = Date.now() - start; //получаем время которое прошло с момента запуска программы
+            if (timePassed >= 4000){
+                clearInterval(timer); // закончить анимацию
+            return;
+            }
+            draw(timePassed);}, 100);//
+
+            function draw(timePassed)//изменяет положение элемента
+            {
+                myimg.style.left = timePassed + 'px'
+                myimg.style.top = Math.sin(timePassed)*50 + 100 + 'px';
+            }
+        }
+      </script>
+  </body>
+</html>

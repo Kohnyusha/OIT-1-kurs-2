@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+        <style type = "text/css">
+            body {background:rgb(223, 197, 199);}
+            </style>
+    </head>
+    <body>
+        <img src=pig.png height="250px" width="250px" id="myimg" style = "position: relative; cursor: pointer;"> <!--смещается относительно себя-->
+        <script>
+        $("#myimg").click(function f() {
+        var img = $("#myimg")[0];
+        img.offsetLeft; //offsetLeft возвращает координаты относительно начала стр
+        $("#myimg").animate({left:"+=1000"},{
+        step:function(left,f){$("#myimg").css(left+'px'); //пошагово выполняется функция
+        }},1000);
+        });
+        </script>
+    </body>
+</html>

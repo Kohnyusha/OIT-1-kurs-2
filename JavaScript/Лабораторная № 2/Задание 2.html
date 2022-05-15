@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <title>Задание 2</title>
+    <style type="text/css"> 
+     table{ 
+         border: 2px solid black;
+	     border-collapse: collapse;
+         font-size: 20px;
+         background-color:rgb(151, 101, 187);
+         text-align: center;
+         }
+     .t{ 
+         background-color:rgb(216, 187, 236);
+         font-size: 20px;
+         margin:10px; 
+         padding:10px; 
+         }
+     td {border:2px black solid}
+    </style>
+ </head>
+  <body>
+   <table>
+    <script type='text/javascript'>
+        a=prompt('Введите a',10); 
+        b=prompt('Введите b',10);
+        document.write("<tr><td> </td>");
+         for (i = 1; i <=a; i++) 
+        document.write("<td>"+ i +" </td>"); 
+        document.write("</tr>");
+        for (j = 1; j <=b; j++) 
+        { 
+        document.write("<tr><td>" + j + " </td>"); 
+        for (i = 1; i <= a; i++) 
+        { 
+        document.write("<td class='t' >" + (i*j) + " </td>");
+        } 
+        document.write("</tr>"); 
+        } 
+    </script>
+   </table>
+  </body>
+</html>

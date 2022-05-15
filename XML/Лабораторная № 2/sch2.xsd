@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"> <!--указывает, что элементы и типы данных, используемые в схеме, происходят из этого пространства имен, также они должны иметь префикс xs-->
+    <xs:element name = "CARTOON"><!--определяет элемент-->
+        <xs:complexType><!--у элемента комплексный тип-->
+            <xs:sequence><!--комплексный тип – эпоследовательность элементов-->
+                <xs:element name = "NAME" type = "xs:string"/>
+                <xs:element name = "YEAR" type = "xs:string"/>
+                <xs:element name = "ZHANR" type = "xs:string"/>
+                <xs:element name = "REITING" type = "xs:string"/>
+                <xs:element name = "FILM" type = "xs:string"/>
+            </xs:sequence>
+        </xs:complexType> 
+    </xs:element> 
+</xs:schema> 

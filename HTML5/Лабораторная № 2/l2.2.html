@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+ <html>
+    <title>Диаграмма</title>
+     <body>
+        <canvas id="canv" width="650" height="650" style="border:3px solid rgb(0, 0, 0); background-color: whitesmoke;"></canvas>
+         <script>
+             var c = document.getElementById("canv");
+             var ctx = c.getContext("2d");
+             ctx.font = "25px Arial serif";
+             ctx.beginPath();
+             ctx.strokeStyle = "rgba(0, 0, 0, 0.75)";
+             ctx.lineWidth = 4;
+             ctx.arc(200,390, 135, 0, 2*Math.PI); //(x,y,радиус,нач_угол,конеч_угол)
+             ctx.stroke();
+
+             ctx.beginPath();
+             ctx.fillStyle = "purple";
+             ctx.arc(200,390, 132, 0, Math.PI/180*105, false); //По умолчанию установлено значение false, что означает по часовой стрелке.
+             ctx.lineTo(200,390);
+             ctx.fill();
+
+             ctx.beginPath();
+             ctx.fillStyle = "rgb(217, 7, 154)";
+             ctx.arc(200,390, 132, Math.PI/180*105, Math.PI/180*52.5 + Math.PI/180*105, false);
+             ctx.lineTo(200,390);
+             ctx.fill();
+
+             ctx.beginPath();
+             ctx.fillStyle = "rgba(87, 217, 255, 0.65)";
+             ctx.arc(200,390, 132, Math.PI/180*52.5 + Math.PI/180*105, Math.PI/180*52.5 + Math.PI/180*105 + Math.PI/180*75, false);
+             ctx.lineTo(200,390);
+             ctx.fill();
+
+             ctx.beginPath();
+             ctx.fillStyle = "rgba(147,126,136, 0.65)";
+             ctx.arc(200,390, 132, Math.PI/180*52.5 + Math.PI/180*105 + Math.PI/180*75, 0, false);
+             ctx.lineTo(200,390);
+             ctx.fill();
+
+             ctx.fillStyle = "rgba(147,126,136, 0.65)";
+             ctx.fillRect(380, 334, 15, 15);
+
+             ctx.fillStyle = "purple";
+             ctx.fillRect(380, 384, 15, 15);
+
+             ctx.fillStyle = "rgba(87, 217, 255, 0.65)";
+             ctx.fillRect(380, 434, 15, 15);
+
+             ctx.fillStyle = "rgb(217, 7, 154)";
+             ctx.fillRect(380, 484, 15, 15);
+
+             ctx.font = "24px Verdana";
+             ctx.fillStyle='rgba(0, 0 , 0, 0.75)';
+
+             ctx.fillText("Сон", 420, 350);
+
+             ctx.fillText("Университет", 420, 400);
+
+             ctx.fillText("ДЗ/Лабы", 420, 450);
+
+             ctx.fillText("Остальное", 420, 500);
+
+             ctx.font = "28px Verdana";
+             ctx.fillText("Диаграмма МОЙ ДЕНЬ", 200, 60);
+         </script>
+     </body>
+ </html>

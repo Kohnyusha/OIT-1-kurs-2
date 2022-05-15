@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <?xml-stylesheet type="text/xsl" href="1.xsl"?>
+<INVENTORY>
+	<UNIVERSITY>
+      <NAME>БГТУ</NAME>
+	   <BALL>305 баллов</BALL>
+      <KOL>40 человек</KOL>
+      <TOWN>г. Минск</TOWN>
+   </UNIVERSITY>
+
+   <UNIVERSITY>
+      <NAME>БГУ</NAME>
+      <BALL>333 баллов</BALL>
+      <KOL>35 человек</KOL>
+      <TOWN>г. Минск</TOWN>
+   </UNIVERSITY>
+
+   <UNIVERSITY>
+      <NAME>БНТУ</NAME>
+      <BALL>300 баллов</BALL>
+      <KOL>45 человек</KOL>
+      <TOWN>г. Минск</TOWN>
+   </UNIVERSITY>
+   
+   <UNIVERSITY>
+      <NAME>БрГТУ</NAME>
+      <BALL>297 баллов</BALL>
+      <KOL>20 человек</KOL>
+      <TOWN>г. Брест</TOWN>
+   </UNIVERSITY>
+</INVENTORY>
+
+

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><!--декларация (пролог + кодировка)-->
+ <?xml-stylesheet type="text/css" href="2.css"?>
+ <!DOCTYPE CARTOON [
+    <!ELEMENT CARTOON (NAME, YEAR, ZHANR, REITING)>
+    <!ELEMENT NAME (#PCDATA)>
+    <!ELEMENT YEAR (#PCDATA)>
+    <!ELEMENT ZHANR (#PCDATA)>
+    <!ELEMENT REITING (#PCDATA)>
+]>
+<CARTOON>
+ <FILM>
+      <NAME>Rick and Morty</NAME>
+      <YEAR>4 декабря 2013 г.</YEAR>
+      <ZHANR>Жанр: мультфильм, комедия, фантастика, приключения</ZHANR>
+      <REITING>КиноПоиск 8,9 из 10</REITING>
+ </FILM>
+ <FILM>
+      <NAME>Gravity Falls</NAME>
+      <YEAR>4 января 2013 г.</YEAR>
+      <ZHANR>Жанр: мультфильм, комедия, детектив, приключения, семейный, фантастика</ZHANR>
+      <REITING>КиноПоиск 8,9 из 10</REITING>
+ </FILM>
+ <FILM>
+      <NAME>Phineas and Ferb</NAME>
+      <YEAR>10 августа 2010 г.</YEAR>
+      <ZHANR>Жанр: семейный, комедия, боевик, фантастика, мультфильм, короткометражка</ZHANR>
+      <REITING>КиноПоиск 7,4 из 10</REITING>
+ </FILM>
+</CARTOON>

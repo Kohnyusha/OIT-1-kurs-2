@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script><!--удаленное использование jQ-->
+    </head>
+    <script>
+        //задание 1
+        document.write("<span id='span1'>Текст меняет цвет при наведении</span><br>");
+        $("#span1").mouseout(function() { $("#span1").css("color", "black") });
+        $("#span1").mouseover(function() { $("#span1").css("color", "red") });
+        document.write("</br>");
+        
+        //задание 2
+        document.write("<span id='span2'>Текст увеличивается при нажатии</span><br>");
+        $("#span2").click(function() { $("#span2").css("fontSize", "25px") });
+        document.write("</br>");
+        
+        //задание 3
+        document.write("<img id='ing' src='3.1.jpg'><br>")
+        $("#ing").click(function() { $("#ing").attr("src", "3.2.jpg") });
+        document.write("</br>");
+        
+        //задание 4
+        document.write("<span id='img2'>Текст меняется на картинку</span><br>")
+        $("#img2").click(function() { $("#img2").html("<img width='300px' src= 3.2.jpg>") });
+        document.write("</br>");
+        
+        //задание 5
+        document.write("<img id='img3' src='4.jpg'>")
+        $("#img3").mouseover(function() { $("#img3").css({ "width": "400px" }) });
+        $("#img3").mouseout(function() { $("#img3").css({ "width": "300px" }) });
+
+        //задание 6
+        document.write("<p>Текст обводится в рамку</p>")
+        $("p").dblclick(function() { $("p").css({ "border": "3px solid red" }) })
+    </script>
+</html>

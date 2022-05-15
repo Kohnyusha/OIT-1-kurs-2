@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <xs:element name="INVENTORY">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element name="NAME" type="xs:string"/>
+            <xs:element name="BALL" type="xs:string"/>
+            <xs:element name="KOL" type="xs:string"/>
+            <xs:element name="TOWN" type="xs:string"/>
+            <xs:element name="UNIVERSITY" type="xs:string"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+</xs:schema>
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Задание 3</title>
+        <style type="text/css">
+        table { 
+         border: 2px solid black;
+	     border-collapse: collapse;
+         font-size: 20px;
+         color:black;
+         background-color: rgba(230, 128, 128, 0.637);
+         margin:10px;
+         padding:50px;
+         }
+         td {border: 2px solid black;}
+        </style>
+    </head>
+        <body>
+            <table> 
+                <script type='text/javascript'> 
+                   a= parseInt(prompt('Введите a','a')); 
+                   b= parseInt(prompt('Введите b','b'));
+                   document.write("<tr><td> Радиус </td>"); 
+                   document.write("<td> Площадь круга </td>"); 
+                   document.write("<td> Длинна окружности </td>"); 
+                   document.write("</tr>"); 
+                   var a;
+                   do { 
+                   document.write("<tr><td>" + Math.round(a) + " </td>");          
+                   document.write("<td>" + Math.round(Math.PI*Math.pow(a,2)) + " </td>");
+                   document.write("<td>" + Math.round(2*a*Math.PI) + " </td>");
+                   document.write("</tr>"); 
+                   a=a+0.3; 
+                   }  
+                   while(a<b)          
+                   </script> 
+               </table> 
+        </body>
+</html>

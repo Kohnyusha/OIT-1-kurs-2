@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+           function fun() {
+         let a='';
+         for (i = 0; i < 2; i++) {
+         if (document.forms[0].checkbutton[i].checked) {
+            a += "<li>" + document.forms[0].checkbutton[i].value + "</li>";}
+         }
+        document.write("Выбранные боксы: <ul>" +a) 
+        }
+        </script>
+    </head>
+    <body>
+        <form name = check>
+           
+            <input type="checkbox" name="checkbutton" value="1"> 1
+            <input type="checkbox" name="checkbutton" value="2"> 2
+           
+
+            <br><br>
+        <input type = "button" value = "вывести" onclick="fun()"/>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Лабораторная № 8</title>
+        <style type = "text/css">
+         body {
+            background:rgb(229, 188, 191);
+            font-family:"academy engraved let";}
+        </style>
+        <script type = "text/javascript">
+
+        //задание 1 this - обработчик события, с помощью obj мы обращаемся к месту вызова этой функции.
+        function newColor(obj) {
+        obj.style.color = "red";
+        }  
+
+        function oldColor(obj) {
+        obj.style.color = "black";
+        }
+       //задание 2
+        function Font(obj) {
+        obj.style.fontSize = "25px";
+        }
+        //задание 3
+        function oneImage() {
+        var image = document.getElementById("img1");{ //id изображения, на котором будет щелчок
+        image.src = "3.2.jpg";}
+        }
+      //задание 4
+        function TextImage() {
+        var image = document.getElementById("textChange")
+        image.innerHTML = "<img src=4.jpg>"
+        }
+      //задание 5
+        function bigImage() {
+        var obj = document.getElementById("img2");{
+        obj.style.width = "600px";
+        obj.style.height = "500px";}
+        }
+
+        function smallImage() {
+        var obj = document.getElementById("img2");{
+        obj.style.width = "400px"
+        obj.style.height = "300px"}
+        }
+      //задание 6
+        function border(obj) {
+        obj.style.border = "2px solid red";
+        }
+        </script>
+    </head>
+    <body>
+        <div>
+            <p><b>Задание 1. (изменение цвета текста)</b></p>
+            <p onMouseOver = newColor(this) onMouseOut = oldColor(this) > Этот текст меняет цвет при наведении курсора не него и увеличивается при нажатии.</p>
+            <p><b>Задание 2. (увеличение текста)</b></p>
+            <p onclick = Font(this)> Этот текст увеличивается при нажатии.</p> 
+            <p><b>Задание 3. (картинка при нажатии меняется на другую)</b></p>
+            <img src="3.1.jpg" id="img1" onclick="oneImage()" width = "400px" height = "300px"><br>
+            <p><b>Задание 4.</b></p>
+            <p id='textChange' onclick="TextImage()" > Тык, чтобы увидеть песеля с:</p><br>
+            <p><b>Задание 5. (увеличение картинки)</b></p>
+            <img src="3.2.jpg" id="img2" onMouseOver="bigImage()" onMouseOut="smallImage()" width = "400px" height = "300px"><br>
+            <p><b>Задание 6.</b></p>
+            <p ondblclick=border(this) > Если нажать на этот текст, вокруг него появится цветная рамка</p>
+        </div>
+    </body>
+</html>

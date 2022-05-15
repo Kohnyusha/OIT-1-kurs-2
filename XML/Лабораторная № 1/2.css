@@ -1,0 +1,23 @@
+CARTOON {background-color: rgb(74, 114, 68);}
+FILM {
+    display: block;
+    text-align: center;
+    margin: 10px 20px 10px 20px;
+    margin-top: 50pt;
+    border-style: solid;
+    background-color: rgba(238, 236, 132, 0.685);
+    border-color: white;
+    font-size: 15pt;
+}
+YEAR {
+    display: block;
+    text-align: center;
+    border-top: solid;
+    border-color: white;
+}
+ZHANR, REITING{
+    display: block;
+    text-align: center;
+    border-top: solid;
+    border-color: white;
+}

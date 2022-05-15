@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+            <style>
+                body {background:rgb(223, 197, 199);
+                    font-size:25px;}
+            </style>
+        </head>
+    <div>
+    <div id="text" style="position:absolute;" >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div> <br><br>
+    <img src=image2.jpg id="image" style="position:absolute;" height="200px" width="220px">
+    </div>
+    <script>
+
+    var k;
+    var drag;
+
+    $("#image").dblclick(function (e) {
+    drag=true;
+    x2 = e.clientX;
+    y2 = e.clientY; //Координаты курсора в момент клика (относительно окна)
+    k = document.getElementById("image");})
+
+    $("#image").mousemove(function(e) {
+    if (drag == true) {
+    x1 = e.clientX;
+    y1 = e.clientY;
+
+    shift_x = x1 - x2; 
+    shift_y = y1 - y2;
+
+    $("#image").css("left",k.offsetLeft + shift_x ); //offsetLeft возвращает координаты относительно начала стр
+    $("#image").css("top",k.offsetTop + shift_y );
+    x2 = x1;
+    y2 = y1;}})
+
+    $("#image").click(function (e) {
+    drag=false;})
+
+    //для текста
+    $("#text").dblclick(function (e) {
+    drag=true;
+    x2 = e.clientX;
+    y2 = e.clientY; //Координаты курсора в момент клика (относительно окна)
+    k=document.getElementById("text");
+    })
+
+    $("#text").mousemove(function(e) {
+
+    if (drag == true) {
+    x1 = e.clientX;
+    y1 = e.clientY;
+
+    shift_x = x1 - x2;
+    shift_y = y1 - y2;
+
+    $("#text").css("left",k.offsetLeft + shift_x );
+    $("#text").css("top",k.offsetTop + shift_y );
+    x2 = x1;
+    y2 = y1;}})
+
+    $("#text").click(function (e) {
+    drag=false;})
+    </script>
+</html>
