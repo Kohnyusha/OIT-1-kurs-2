@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+ <html>
+  <head> 
+    <style type="text/css">
+    body {background-color: rgb(197, 142, 160);}
+    #a { 
+         float:left;
+         padding: 5px 5px; 
+         border: 3px solid black; 
+         border-left: 3px solid red; 
+         border-right: 3px solid red; 
+        }
+    #b { 
+        float:left; 
+        padding: 5px 5px; 
+        border: 3px solid black; 
+        border-right: 3px solid red; 
+        }
+    #c { 
+        float:left; 
+        padding: 5px 5px; 
+        border: 3px solid black; 
+        border-left: 3px solid red;
+        }
+    table { 
+        border-collapse: collapse; 
+        border: 3px solid black; 
+        width: 40%; 
+        }
+    td { border-right: 3px solid red; }
+    #d:hover{color:yellow;}
+    #f:hover{color:green;}
+    </style>
+    </head> 
+<body>
+    <div>
+        <table>
+            <tr>
+                <td><a href='ласка.jpg' id="d">первая ссылка</a></td>
+                <td><a href='ласка.jpg' id="f">вторая ссылка</a></td>
+                <td><a href='ласка.jpg' id="d">третья ссылка</a></td>
+                <td><a href='ласка.jpg' id="f">четвертая ссылка</a></td>
+                <td><a href='ласка.jpg' id="d">пятая ссылка</a></td>
+            </tr>
+    </table>
+    </div>
+    <br>
+    <div>
+        <div id='b'><a href='ласка.jpg' id="d">первая ссылка</a></div>
+        <div id='a'><a href='ласка.jpg' id="f">вторая ссылка</a></div>
+        <div id='a'><a href='ласка.jpg' id="d">третья ссылка</a></div>
+        <div id='a'><a href='ласка.jpg' id="f">чевертая ссылка</a></div>
+        <div id='c'><a href='ласка.jpg' id="d">пятая ссылка</a></div>
+    </div>
+</body>
+</html>

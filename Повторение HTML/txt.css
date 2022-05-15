@@ -1,0 +1,42 @@
+body {
+    background-color:rgb(187, 223, 190) ;
+    }
+    a:hover{color:rgb(65, 54, 33);}
+    .top {
+    color:aliceblue;
+    font-family:"CENTURY GOTHIC";
+    font-size:30pt;
+    text-align:center;
+    letter-spacing:1pt;
+    text-decoration:underline;
+    background-color: rgb(95, 77, 60);
+    height:100px;
+    }
+    .main { 
+    display: flex; /*располагаются в строке*/
+    flex-wrap:wrap-reverse; /*расоложение блоков в обратном порядке*/
+    }
+    .left{
+    flex-grow:1; /*блоки заняли оставшееся место в контейнере.*/
+    text-align:justify; /*выравнивание по ширине*/
+    background-color:rgb(189, 162, 131);
+    width: 290px ;
+    font-size:31px;
+   }
+    .right{
+    flex-basis:1100px;/*ширина блока*/
+    flex-grow:3;/*блок заняли оставшееся место в контейнере.*/
+    text-align:justify; /*выравнивание по ширине*/
+   }
+    .zoo{
+    text-align:center;
+    font-size:30pt;
+   }
+    .picture{
+    float:left;
+    margin: 17px;
+   }
+    .text{
+    font-family:"academy engraved let";
+    font-size:30pt;
+   }

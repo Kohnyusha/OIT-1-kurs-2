@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <style type="text/css">
+        body {background-color: rgb(148, 101, 101);}
+        .p1 {
+		  width: 300px;
+          margin: 7px;
+          padding: 10px;
+          border: 3px solid black;
+          background:#8f4a9b;
+          animation: change-color 5s infinite;
+        }
+        @keyframes change-color {
+         0% {background-color: #fd0b0b;} 
+         50% {background-color: #d4b5b5;}  
+         100% {background-color: #fd0b0b;}
+        }
+		.p2{
+		width: 500px;
+		margin: 17px;
+		padding: 15px;
+        border: 3px solid black;
+        background:#ffd000;
+		transition: all 1s;
+        cursor: pointer;
+		}
+		.all:hover .p2 {
+		 background-color: #53f314;
+         color: #000;
+		transform: rotate(-30deg);
+		}
+		.p3{
+		 margin: 17px;
+		 padding: 15px;
+		 border: 3px solid black;
+		 background: rgb(218, 26, 176);
+		 transition: all 3s;
+         cursor: pointer;
+		}
+		.all:hover .p3 {
+		 background-color: #39d8e7;
+         color: #000;
+        transform: scale(0.5);
+		}
+        </style>
+    </head>
+    <body>
+        <div class="all">
+         <div class="p1">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.</div>
+         <div class="p2">Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</div>
+         <div class="p3">Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский набор слов, но это не совсем так. Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney, штат Вирджиния, взял одно из самых странных слов в Lorem Ipsum, "consectetur", и занялся его поисками в классической латинской литературе. В результате он нашёл неоспоримый первоисточник Lorem Ipsum в разделах 1.10.32 и 1.10.33 книги "de Finibus Bonorum et Malorum" ("О пределах добра и зла"), написанной Цицероном в 45 году н.э. Этот трактат по теории этики был очень популярен в эпоху Возрождения. Первая строка Lorem Ipsum, "Lorem ipsum dolor sit amet..", происходит от одной из строк в разделе 1.10.32</div>	   
+        </div>
+     </body>
+ </html>
